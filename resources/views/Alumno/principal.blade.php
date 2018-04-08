@@ -71,12 +71,12 @@
                                         
  
                                     <table border ="0" align="center" class="default">
-			<tr>
+			<tr style="padding: 5px;">
                             <td><a href="{{url::asset('/')}}Expediente/FichaExp"><img src="{{url::asset('/')}}<?php if($ficha == "5"){echo "imagenes/fwdbotonesactivosgrises/IDENTIFICACINN.png";} else {echo "imagenes/b7.png";}?>" heigth="50" width="300"></a></td>
                             <td><a href="{{url::asset('/')}}Expediente/FamHeder"><img src="{{url::asset('/')}}<?php if($heredo == "5"){echo "imagenes/fwdbotonesactivosgrises/HEREDOFAMS.png";} else {echo "imagenes/b8.png";}?>" heigth="50" width="300"></a></td>
                             <td><a href="{{url::asset('/')}}Expediente/AntescPat"><img src="{{url::asset('/')}}<?php if($patologico == "5"){echo "imagenes/fwdbotonesactivosgrises/APP.png";} else {echo "imagenes/b2.png";}?>" heigth="50" width="300"></a></td>
 			</tr>
-			<tr>
+			<tr style="padding: 5px;">
                             <td><a href="{{url::asset('/')}}Expediente/AntescNoPat"><img src="{{url::asset('/')}}<?php if($nopatologico == "5"){echo "imagenes/fwdbotonesactivosgrises/APNP.png";} else {echo "imagenes/b1.png";}?>" heigth="50" width="300"></a></td>
 
                             <td><a href="{{url::asset('/')}}Expediente/Aparatos"><img src="{{url::asset('/')}}<?php if($aparatos == "5"){echo "imagenes/fwdbotonesactivosgrises/APA Y SISTE.png";} else {echo "imagenes/b3.png";}?>" heigth="50" width="300"></a></td>
@@ -84,13 +84,13 @@
                             <td><a href="{{url::asset('/')}}Expediente/Mujeres"><img src="{{url::asset('/')}}<?php if($mujeres == "5"){echo "imagenes/fwdbotonesactivosgrises/MUJERES.png";} else {echo "imagenes/b10.png";}?>" heigth="50" width="300"></a></td>
 			</tr>
 				
-			<tr>		
+			<tr style="padding: 5px;">		
                             <td><a href="{{url::asset('/')}}Expediente/ExplFisica"><img src="{{url::asset('/')}}<?php if($explo == "5"){echo "imagenes/fwdbotonesactivosgrises/EXPLO FISI.png";} else {echo "imagenes/b6.png";}?>" heigth="50" width="300"></a></td>
                             <td><a href="{{url::asset('/')}}Expediente/HigOral"><img src="{{url::asset('/')}}<?php if($bucal == "5"){echo "imagenes/fwdbotonesactivosgrises/HIGI ORA.png";} else {echo "imagenes/b9.png";}?>" heigth="50" width="300"></a></td>
                             <td><a href="{{url::asset('/')}}Expediente/Receta"><img src="{{url::asset('/')}}imagenes/b12.png" heigth="50" width="300"></a></td>
 			</tr>
 
-			<tr>
+			<tr style="padding: 5px;">
                             <td><a href="{{url::asset('/')}}Expediente/Consentimiento"><img src="{{url::asset('/')}}imagenes/b4.png" heigth="50" width="300"></a></td>
                             <td><a href="{{url::asset('/')}}Expediente/Diagnostico"><img src="{{url::asset('/')}}<?php if($resumen == "5"){echo "imagenes/fwdbotonesactivosgrises/RESU CLINI.png";} else {echo "imagenes/b13.png";}?>" heigth="50" width="300"></a></td>
                             <td><a href="{{url::asset('/')}}Expediente/Nota"><img src="{{url::asset('/')}}imagenes/b11.png" heigth="50" width="300"></a></td>

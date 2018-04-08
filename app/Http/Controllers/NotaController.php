@@ -105,7 +105,7 @@ class NotaController extends Controller
         $datos['edad'] = $expediente->edad;
         $datos['genero'] = $expediente->genero;
         $datos['num'] = $expediente->folio_expediente;
-        return view ('Alumno.Nota_evolucion',$datos);           
+        return view ('Alumno.Nota_Evolucion',$datos);           
     }        
 
 /****************Notas/Update/Nota********************************/
