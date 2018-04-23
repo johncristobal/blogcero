@@ -53,7 +53,7 @@
 				
 				<tr>
 					<td><label>Nombre del Paciente</label></td>
-                                        <td><input type="text" class="form" name="nombre" value="{{ $nombre }}" size="50"></td>
+                                        <td><input type="text" class="form" name="nombre" value="{{ $nombre }}" size="50" disabled="true"></td>
 				</tr>
 				<tr>
 					<td class="Separador" colspan="2"></td>
@@ -61,21 +61,21 @@
 
 				<tr>	
 					<td><label>Edad</label></td>
-                                        <td><input type="text" class="form" name="edad" value="{{ $edad }}"></td>
+                                        <td><input type="text" class="form" name="edad" value="{{ $edad }}" disabled="true"></td>
 				</tr>
 				<tr>
 					<td class="Separador" colspan="2"></td>
 				</tr>
 				<tr>
 					<td><label>G&eacute;nero</label></td>
-                                        <td><input type="text" class="form" name="genero" value="{{ $genero }}"></td>
+                                        <td><input type="text" class="form" name="genero" value="{{ $genero }}" disabled="true"></td>
 				</tr>
 				<tr>
 					<td class="Separador" colspan="2"></td>
 				</tr>
 				<tr>
 					<td><label>Número del Expediente</label></td>
-					<td><input type="text" class="form" value="{{ $num }}"></td>
+					<td><input type="text" class="form" value="{{ $num }}" disabled="true"></td>
 				</tr>
 				<tr>
 					<td class="Separador" colspan="2"></td>
