@@ -1500,7 +1500,7 @@ class ExpedienteController extends Controller
             $datos['referencia'] = "";
             $datos['contraref'] = "";
             $datos['nota'] = "";
-            return view ('Alumno.Nota_evolucion',$datos);        
+            return view ('Alumno.Nota_Evolucion',$datos);        
         }else{
             //mas de un registro...mostramos lista de notas
             $arrayt = array();
