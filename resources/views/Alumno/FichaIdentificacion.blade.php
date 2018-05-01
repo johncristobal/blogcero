@@ -169,7 +169,7 @@
                                                                         'IMSS' => 'IMSS',
                                                                         'ISSEMYM' => 'ISSEMYM',
                                                                         'ISSFAM' => 'ISSFAM',
-                                                                        'ISSTE' => 'ISSTE',
+                                                                        'ISSSTE' => 'ISSSTE',
                                                                         'PEMEX' => 'PEMEX',
                                                                         'SEGURO POPULAR' => 'SEGURO POPULAR',
                                                                         'SSA' => 'SSA'
@@ -245,7 +245,7 @@
 								<td>Religi&oacute;n:</td> 
                                                                 <td>
                                                                     {!! Form::select('Religion',[
-                                                                        'Catolica' => 'Catolica',
+                                                                        'Catolica' => 'Católica',
                                                                         'Cristiana' => 'Cristiana',
                                                                         'Mormona' => 'Mormona',
                                                                         'Budista' => 'Budista',

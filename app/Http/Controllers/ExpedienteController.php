@@ -1492,7 +1492,7 @@ class ExpedienteController extends Controller
                         
         if((count($data) == 0)){
             //solamente hay un registro...entonces si abrimos
-            $datos['nombre'] = $expediente->nombre_paciente;
+            $datos['nombre'] = $expediente->nombre_paciente." ".$expediente->ap_paterno." ".$expediente->ap_materno;
             $datos['edad'] = $expediente->edad;
             $datos['genero'] = $expediente->genero;
             $datos['num'] = $expediente->folio_expediente;
