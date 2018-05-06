@@ -1,106 +1,40 @@
-
-.letra
-{
-  font-family:'Helvetica';
-
-}
-
-.justi{
-  text-align: justify;
-}
-
-.firm
-{
-  width:200px;
-  text-align: center;
-}
-
-legend
-{
-  font-family: 'Helvetica';
-  font-weight: bold;
-}
-
 #cabecera_receta
 {
-  width: 770px;
+  width: 710px;
   height: 150px;
-  left: -35px;  
+  /*border: solid 1px;
+  border-color: #004000;*/
 }
 
 #Cuerpo_Receta
 {
   width: 700px;
-  height: 620px;  
+  height: 620px;
+  
 }
 
 /*Pie de la receta*/
 #footer
 {
-  width: 300px;
+  width: 400px;
   height: 150px;  
   position: relative;
-  left: 385px;
-  top: 150px;  
-}
-
-/*Divs de la pare de la receta como atencion, observ, etc*/
-
-#atenc
-{
-  width: 680px;
-  height: 120px;  
-  position: relative;
-  left: 3px;
-  top: 20px;  
-}
-
-#preesc
-{
-  width: 680px;
-  height: 120px;  
-  position: relative;
-  left: 3px;
-  top: 50px;  
-}
-
-#ind
-{
-  width: 680px;
-  height: 120px;  
-  position: relative;
-  left: 3px;
-  top: 80px;  
-}
-
-#obs
-{
-  width: 680px;
-  height: 120px;  
-  position: relative;
-  left: 3px;
-  top: 110px;  
+  left: 350px;
+  top: -10px;
+  
 }
 
 /*Es para distinguir el pie del pdf de consentimiento informado del de la receta*/
 .footerCons
 {
-  width: 500px;
+  width: 700px;
   height: 50px;
   /*border: solid 1px;
   border-color: #004000;*/
   position: relative;
-  left: 530px;
-  top: 110px;  
-}
-
-#firma
-{
- width: 700px;
-  height: 50px;
-  position: relative;
   left: 0px;
-  top: -20px;  
+  top: -60px;
+  
 }
 
 #datos
@@ -109,49 +43,47 @@ legend
   left: 10px;
   top: 10px;
   width: 690px;
-  height: 800px;  
+  height: 600px;
+  border: solid 1px;
+  border-color: #004001;
 }
+
+
 
 #logo
 {
   position: relative;
  left: 40px;
   top: 10px;
+
 }
 
 #informacion
 {
   position: relative;
   left: 200px;
-  top: -130px;
-  width: 500px;
+  top: -110px;
+  width: 300px;
   height: 150px;  
   text-align: center;
-  
 }
 
 #folio
 {
   position: relative;
-  left: 580px;
-  top: -281px;
+  left: 550px;
+  top: -240px;
 }
 
 /*Para separar los divs uno de otro*/
 .Separador
 {
   width: 150px;
-  height: 10px;
+  height: 30px;
 }
 
 p{
   text-align: justify;
-  font-family: Arial;
-}
-
-.dir{
-  text-align: center;
-  font-family: Arial;
 }
 
 /*Se utiliza para poder distinguir los subtitulos de los titulos grandes*/
@@ -159,21 +91,6 @@ p{
 {
   text-align: center;
 }
-
-fieldset 
-{ 
-  border:1px solid gray; 
-}
-
-.area
-{
-  width:638px;
-  height:100px;
-  border: 1px solid gray;
-  font-family: 'Helvetica';
-}
-
-
 
 /*
 
