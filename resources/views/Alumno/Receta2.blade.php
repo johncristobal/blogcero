@@ -35,10 +35,10 @@
                         <h5 style="color: #FAF834;">Favor de llenar los campos marcados con *</h5>
                     @endif
 
-			<form method="POST" action="{{url::asset('/')}}index.php/pdf">
+			<form method="post" action="{{url::asset('/')}}pdf">
 				<table border="0" align="center" class="default">
 				<tr>
-					<td><label>*Identificador:</label></td>
+					<td><label>* Identificador:</label></td>
 					 <?php
 						srand ((double) microtime( )*1000000);
 						$numero_aleatorio = rand(0,999);
@@ -52,24 +52,24 @@
 				</tr>
 				
 				<tr>
-					<td><label>*Area de Atenci&oacute;n:</label></td>
+					<td><label>* Àrea de Atenci&oacute;n:</label></td>
 					<td><input type="text" name="areaatencion"></td>
 				</tr>
 				<tr>
 					<td></br></td>	
 				</tr>
 				<tr>
-					<td><label>*Preescripción uno:</label></td>
+					<td><label>* Preescripción uno:</label></td>
 					<td><textarea class="form" rows="3" cols="30" name="preescripcion"></textarea></td>
 				</tr>
 
 				<tr>
-					<td><label>*Preescripción dos:</label></td>
+					<td><label>* Preescripción dos:</label></td>
 					<td><textarea class="form"rows="3" cols="30" name="indicaciones"></textarea></td>
 				</tr>
 				
 				<tr>
-					<td><label>*Preescripción tres:</label></td>
+					<td><label>* Preescripción tres:</label></td>
 					<td><textarea class="form" rows="3" cols="30" name="observaciones"></textarea></td>
 				</tr>
 				<tr>
@@ -84,7 +84,7 @@
 				</tr>
 
 				<tr>
-					<td colspan="2">Nota: Registre nombre generico y comercial de medicamentos, consulte instrucciones</td>
+					<td colspan="2">Nota: Registre nombre genérico y comercial de medicamentos, consulte instrucciones</td>
 				</tr>
 					
 			</table>

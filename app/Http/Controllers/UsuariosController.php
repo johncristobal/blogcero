@@ -98,6 +98,7 @@ class UsuariosController extends Controller
                     $request->session()->put('nombrecom', $correcto[0]->name.' '.$correcto[0]->pat.' '.$correcto[0]->mat);
                     $request->session()->put('iduser', $correcto[0]->id);                    
                 }
+                
                 if($correcto[0]->rol == "1"){
                     $request->session()->put('isAdmin',"1");
                     return view('indexAdmin');
@@ -227,6 +228,8 @@ class UsuariosController extends Controller
 	$articulo->correo = $request->input('correo');
         $articulo->rol = $request->input('perfil');
         $articulo->password = $request->input('pass');
+        $articulo->direccion = $request->input('direccion');
+        $articulo->telefono = $request->input('phone');
         $articulo->created_at = "0";
         $articulo->updated_at = "0";                
 	$articulo->save();
