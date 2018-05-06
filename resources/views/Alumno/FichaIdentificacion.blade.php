@@ -83,7 +83,7 @@
 												
 						<tr>
                                                     <td><label>Número de Recibo de Expediente: </label></td>
-                                                    <td><input type="text" name="NumReciboExpediente" value="{{$expediente->recibo_pago}}"></td>	
+                                                    <td><input type="text" name="NumReciboExpediente" value="{{$expediente->recibo_pago}}" disabled="true"></td>	
 						</tr>
 
 						<tr>
@@ -113,7 +113,7 @@
                                                 <tr>
                                                     <td class="Separador" colspan="6"></td>	
 							</tr>
-s							<tr>
+							<tr>
 								<td> Colonia </td> <td><input type="text" name="Colonia" value="{{ $direccion[0]->colonia or ''}}"></td>	
 								<td>Delegaci&oacute;n o Municipio: </td><td><input type="text" name="Municipio" value="{{ $direccion[0]->delegacion or ''}}"></td>	
 								<td>Entidad:</td>
@@ -169,7 +169,7 @@ s							<tr>
                                                                         'IMSS' => 'IMSS',
                                                                         'ISSEMYM' => 'ISSEMYM',
                                                                         'ISSFAM' => 'ISSFAM',
-                                                                        'ISSTE' => 'ISSTE',
+                                                                        'ISSSTE' => 'ISSSTE',
                                                                         'PEMEX' => 'PEMEX',
                                                                         'SEGURO POPULAR' => 'SEGURO POPULAR',
                                                                         'SSA' => 'SSA'
@@ -192,9 +192,9 @@ s							<tr>
                                                     <td colspan="6"><h3>Datos del Paciente</h3></td>
 						</tr>
 						<tr>
-                                                    <td>Apellido Paterno: </td> <td><input type="text" name="APat" value="{{$expediente->ap_paterno}}"></td>	
-                                                    <td>Apellido Materno: </td> <td><input type="text" name="AMat" value="{{$expediente->ap_materno}}"></td>
-                                                    <td>Nombre(s): </td>  <td><input type="text" name="Nombre" value="{{$expediente->nombre_paciente}}"></td>	
+                                                    <td>Apellido Paterno: </td> <td><input type="text" name="APat" value="{{$expediente->ap_paterno}}" disabled="true"></td>	
+                                                    <td>Apellido Materno: </td> <td><input type="text" name="AMat" value="{{$expediente->ap_materno}}" disabled="true"></td>
+                                                    <td>Nombre(s): </td>  <td><input type="text" name="Nombre" value="{{$expediente->nombre_paciente}}" disabled="true"></td>	
 						</tr>
 
 						<tr>
@@ -202,7 +202,7 @@ s							<tr>
 						</tr>
 
 							<tr>
-								<td>Género:</td> <td><select name="GeneroPaciente">
+								<td>Género:</td> <td><select name="GeneroPaciente" disabled="true" readonly="false">
                                                                 @if($expediente->genero == 'masculino')
                                                                         <option value="Masculino" selected="true">Masculino</option>
                                                                         <option value="Femenino">Femenino</option>
@@ -245,7 +245,7 @@ s							<tr>
 								<td>Religi&oacute;n:</td> 
                                                                 <td>
                                                                     {!! Form::select('Religion',[
-                                                                        'Catolica' => 'Catolica',
+                                                                        'Catolica' => 'Católica',
                                                                         'Cristiana' => 'Cristiana',
                                                                         'Mormona' => 'Mormona',
                                                                         'Budista' => 'Budista',

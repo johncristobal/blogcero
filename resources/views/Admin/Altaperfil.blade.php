@@ -63,7 +63,19 @@
                                     <td class="Separador" colspan="6"></td>
 				</tr>
                                 <tr>
-                                    <td>Matrícula</td><td><input type="text" name="matricula"></td>					
+                                    <td>Cédula</td><td><input type="text" name="matricula"></td>					
+				</tr>
+				<tr>
+                                    <td class="Separador" colspan="6"></td>
+				</tr>
+                                <tr>
+                                    <td>Dirección</td><td><input type="text" name="direccion"></td>					
+				</tr>
+				<tr>
+                                    <td class="Separador" colspan="6"></td>
+				</tr>
+                                <tr>
+                                    <td>Teléfono</td><td><input type="text" name="phone"></td>					
 				</tr>
 				<tr>
                                     <td class="Separador" colspan="6"></td>

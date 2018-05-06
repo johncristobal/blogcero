@@ -125,12 +125,12 @@
                                     <h2>Archivos del expediente</h2>
 
                                     <div class="container">
-                                        
+                                        <br>
                                         <!--Subir archivo si asi lo desea-->
                                         <table class="table" id="buscador" width="100%">
                                             <tr>
-                                                <td width="70%"></td>
-                                                <td width="30%">
+                                                <td width="50%"></td>
+                                                <td width="50%">
                                                     <!-- Trigger/Open The Modal -->
                                                     Subir archivo &nbsp;&nbsp;&nbsp;<img src="{{url::asset('/')}}imagenes/ic_file_upload_white_24dp/web/ic_file_upload_white_24dp_2x.png" id="myBtn"></img>
                                                     <!--input type="file" name="image" value="Subir archivo" title="" style="width: 400px;">

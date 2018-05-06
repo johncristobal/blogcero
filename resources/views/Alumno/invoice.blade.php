@@ -17,9 +17,11 @@
         </div>
 
         <div id="informacion">
-          <h3 class="letra">Universidad Privada Del Edo de México</h3>
-          <p class="letra">Av. Revolución No 46, Centro, CP 55000 Ecatepec de Morelos, Méx.</p>
-            <p class="letra">Teléfono: 01 55 5770 4218</p>
+          <h3 class="letra">{{$invoice}}</h3>
+          <h5 class="letra">Dr {{$n_doc}} </h5>
+          <p class="dir">Direcci&oacute;n: {{$usuario->direccion}}.</p>
+          <p class="dir">Tel&eacute;fono: {{$usuario->telefono}},&nbsp;&nbsp;C&eacute;dula Profesional: {{$alumno->matricula}} </p>
+         
         </div>
 
         <div id="folio">
@@ -87,10 +89,9 @@
 
        <div id="footer">
        <fieldset>       
-       <legend>Datos profesor</legend>
-          <label>Nombre del Profesor:_________________________</label>
-          <label>Cédula Profesional:___________________________</label>
-          <label>Firma del Profesor:___________________________</label>
+       <legend>Datos </legend>
+          <label>C.D.:_________________________</label>
+          <label>C.D.:_________________________</label>
           <label>Fecha de Emisión: {{" ".$date}}</label>
         </fieldset>
         </div>
