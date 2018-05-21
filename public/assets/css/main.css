@@ -2371,10 +2371,10 @@ iframe
 			-webkit-animation: none;
 			-ms-animation: none;
 			animation: none;
-                        background-image: url(images/header.jpg);
-                        background-size: 100% 178px;
+                        background-image: url(images/banner3.png);
+                        background-size: 100% 165px;
                         background-repeat: no-repeat;
-                        height: 178px;
+                        height: 165px;
 			/*background: transparent;*/
 			box-shadow: none;
 			color: #fff;
