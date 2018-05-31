@@ -5,7 +5,7 @@
    <link rel="stylesheet" href="{{URL::asset('assets/css/pdf.css')}}">
   
     
-    <title>ConsentimientoInformado</title>
+    <title>Consentimiento Informado</title>
   
   
   </head>
@@ -13,13 +13,14 @@
   <body>   
       <div id="cabecera_receta">
         <div id="logo">
-          <img src="{{URL::asset('assets/css/images/logo.jpg')}}" width="100" height="100" >
+          <img src="{{URL::asset('assets/css/images/logo_receta.jpg')}}" width="100" height="100" >
         </div>
 
         <div id="informacion">
-          <h2 class="letra">Universidad Privada Del Edo de México</h2>
-          <p class="letra">Av. Revolución No 46, Centro, CP 55000 Ecatepec de Morelos, Méx.</p>
-          <p class="letra">Teléfono: 01 55 5770 4218</p>
+          <h3 class="letra">Consentimiento Informado</h3>
+          <h5 class="letra">Dr {{$doc}} </h5>
+          <p class="dir">Direcci&oacute;n: {{$usuario->direccion}}.</p>
+          <p class="dir">Tel&eacute;fono: {{$usuario->telefono}},&nbsp;&nbsp;C&eacute;dula Profesional: {{$alumno->matricula}} </p>
         </div>
 
         
@@ -28,13 +29,13 @@
       
       <h2 class="letra" align="center">Consentimiento Informado</h2>
       <br>      
-        <p class="letra">A través del presente, declaro y manifiesto, en pleno uso de mis facultades mentales que he sido informado/a 
+        <p class="letra">A través del presente, declaro y manifiesto, en pleno uso de mis facultades mentales que sido informado/a 
           y comprendo la necesidad y fines de ser atendido/a para restaurar total o parcialmente según las necesidades.
         </p>
         <p class="letra">
           He sido informado/a de las alternativas posibles del tratamiento, al igual comprendo la necesidad de realizar,
          si es preciso, tratamientos remitidos con alguna interconsulta, tanto de carácter médico y quirúrgicos, incluyendo el uso 
-           de anestesia local; siempre que el tratamiento lo amerite y bajo la atención del responsable y mínimo un 
+           de anestesia local y/o General; siempre que el tratamiento lo amerite y bajo la atención del responsable y mínimo un 
            asistente.</p>
         <p class="letra">   
           Comprendo los posibles riesgos y complicaciones explicados con anterioridad, involucradas en los tratamientos y comprendo 

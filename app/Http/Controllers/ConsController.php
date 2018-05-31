@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Expediente;
+use App\User;
+use App\Alumno;
 
 class ConsController extends Controller
 {
@@ -23,9 +25,55 @@ class ConsController extends Controller
     public function invoice(Request $request)
     {
            
+        //$id_us=4;
+        $id_us = $request->session()->get('iduser','0');
+
+        //DAtos del dr para el pdf
+        $usuario= User::select('name','pat','mat','direccion','telefono')-> where('id','=',$id_us)->first();
+        //dd($usuario);
+        $alumno= Alumno::Select('matricula')->where('id_usuario','=',$id_us)->first();  
+        //dd($alumno);
+  
                
         //Validamos los campos del formulario
          $this->validate($request,[
+            'paciente' => 'required',
+            'doctor' => 'required',
+            'testigo1'=> 'required',
+            'testigo2' =>'required',      
+            ]);
+
+        
+       //Fecha que se genera el pdf
+        $date = date('d-m-Y');
+
+        //Variables que se usan para el nombre completo del dr 
+        $name_doc=$usuario->name;
+        $pat_doc=$usuario->pat;
+        $mat_doc=$usuario->mat;
+        $doc= $name_doc.' '.$pat_doc.' '.$mat_doc;
+
+       //Obteniendo los datos del formulario
+        $paciente=$request->input('paciente');
+        $doctor=$request->input('doctor');
+        $testigo1=$request->input('testigo1');
+        $testigo2=$request->input('testigo2');
+       
+        
+        //Manda a llamar el html que generara el pdf, se envian las variables a usar en el pdf
+        $view = \View::make('Alumno.Consentimiento', compact('paciente', 'doctor', 'usuario', 'alumno', 'doc',
+                                                                'testigo1', 'testigo2','date'))-> render();
+
+        //Construye el pdf
+        $pdf = \App::make('dompdf.wrapper');
+        //Se usa para cargar el pdf en el navegador
+        $pdf -> loadHTML($view);        
+        //Se le pone el nombre con el cual se descarga el archivo    
+        return $pdf -> stream('Consentimiento_informado');
+        
+               
+        //Validamos los campos del formulario
+         /*$this->validate($request,[
             'paciente' => 'required',
             'doctor' => 'required',
             'testigo1'=> 'required',
@@ -63,7 +111,7 @@ class ConsController extends Controller
         //$pdf->save($destinationPath)->stream('download.pdf');
         file_put_contents($destinationPath."/Consentimiento_".$expediente->folio_expediente.".pdf", $pdf->output());
         //Se le pone el nombre con el cual se descarga el archivo    
-        return $pdf -> stream('Consentimiento_informado');
+        return $pdf -> stream('Consentimiento_informado');*/
 
     }
 

@@ -19,7 +19,7 @@
 					<nav id="nav">
 						<ul>
 							<li class="submenu">
-							<li><a href="{{URL::asset('/')}}index.php/Alumno" class="button special">Menú</a></li>
+							<li><a href="{{URL::asset('/')}}Alumno" class="button special">Menú</a></li>
 							
 						</ul>
 					</nav>
@@ -35,7 +35,7 @@
                         <h5 style="color: #FAF834;">Favor de llenar los campos marcados con *</h5>
                     @endif
 				
-				<form method="POST" action="{{url::asset('/')}}index.php/pdfConsent">
+				<form method="POST" action="{{url::asset('/')}}pdfConsent">
 				
 			 	<pre>
 				 	A través del presente, declaro y manifiesto, en pleno uso de mis facultades mentales que he sido informado/a 

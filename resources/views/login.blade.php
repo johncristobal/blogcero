@@ -56,13 +56,13 @@
                                             <form method="post" action="{{url::asset('/')}}Usuarios/loginuser">
                                             <table border="0" class="default" align="center">
                                             <tr>
-                                                <td><input type="email" name="correo" placeholder=" Ingresa correo"></td>
+                                                <td><input type="email" name="correo" placeholder="Ingresa correo"></td>
                                             </tr>
                                             <tr>
                                                 <td class="Separador"></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="password" name="contrasena" placeholder=" Ingresa contraseña"></td>
+                                                <td><input type="password" name="contrasena" placeholder="Ingresa contraseña"></td>
                                             </tr>
                                             
                                             <tr>

@@ -13,7 +13,7 @@
   <body>   
       <div id="cabecera_receta">
         <div id="logo">
-          <img src="{{URL::asset('assets/css/images/logo.jpg')}}" width="100" height="100" >
+          <img src="{{URL::asset('assets/css/images/logo_receta.jpg')}}" width="100" height="100" >
         </div>
 
         <div id="informacion">
@@ -89,8 +89,7 @@
 
        <div id="footer">
        <fieldset>       
-       <legend>Datos </legend>
-          <label>C.D.:_________________________</label>
+       <legend>Firma </legend>
           <label>C.D.:_________________________</label>
           <label>Fecha de Emisión: {{" ".$date}}</label>
         </fieldset>

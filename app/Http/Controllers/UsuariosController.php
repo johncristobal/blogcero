@@ -36,27 +36,60 @@ class UsuariosController extends Controller
     
     public function sendmailpass(Request $request){
     
+        //Ahora recupero correo
+        //genero contraseña
+        //actualizo contraseña en usuario donde correo igual a correo
+        //hacer un correo con logo y todo
+        
         $mail = $request->input('correo');
         
-        //$nuevopass = $this->generarcontrasena();        
+        //check if mail exists
+        $datosconsulta = User::where('correo','=',$mail)->get();
+        if(count($datosconsulta)==0){
+            //echo "No existe correo";
+            $errors = new MessageBag(['pass'=>['Correo no existente']]);
+            return Redirect::back()->withErrors($errors);//->withInput(\Illuminate\Support\Facades\Input::except('pass'));
 
-        $nuevopass = "passwordtemporal";
+        }else{
+            $nuevopass = $this->randomPassword();
+            //$nuevopass = "passwordtemporal";
+
+            $casi = User::where('correo','=',$mail)->update(array(
+                "password" => $nuevopass,
+            ));
+
+            $data = array(
+                "password" => $nuevopass
+            );
+
+            Mail::send('html', $data, function($message) use ($request)
+            {
+               //remitente
+               $message->from('info@carolvesystems.com', 'info@carolvesystems.com');
+
+               //asunto
+               $message->subject('Recuperación de contraseña');
+
+               //receptor
+               $message->to($request->input('correo'), 'Carolve Systems'); 
+            });
+            
+            //echo "Si";
+        }
         
-        $data = array();
-        
-        Mail::send('html', $data, function($message) use ($request)
-        {
-           //remitente
-           $message->from('info@xatsaautopartes.com', 'info@xatsaautopartes.com');
- 
-           //asunto
-           $message->subject('prueba');
- 
-           //receptor
-           $message->to('cristobaljohn00@gmail.com', 'JOHN CRISTOBAL'); 
-        });
-        
-        echo "Si";
+        return redirect('login');//->route('login');
+
+    }
+    
+    function randomPassword() {
+        $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+        $pass = array(); //remember to declare $pass as an array
+        $alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
+        for ($i = 0; $i < 8; $i++) {
+            $n = rand(0, $alphaLength);
+            $pass[] = $alphabet[$n];
+        }
+        return implode($pass); //turn the array into a string
     }
     
     //validate data from login
